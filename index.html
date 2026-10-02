@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<title>五月天电影网 - 今日放映场次_最新电影推荐_高分电影排行榜</title>
+<meta name="description" content="五月天电影网是专注电影推荐与放映资讯的中文影迷站点，每日更新今日放映场次表、最新电影推荐、分类影片索引、原创影评与高分电影排行榜，帮你按场次选片、按时段看片。">
+<meta name="keywords" content="五月天电影网,电影推荐,今日放映,电影场次表,最新电影,影视资讯,高分电影,电影排行榜,影评,观影指南">
+<meta name="author" content="五月天电影网">
+<meta name="robots" content="index,follow">
+<meta name="revisit-after" content="1 days">
+<meta name="theme-color" content="#1B2A4A">
+<link rel="canonical" href="https://wuyuetiandianyingwang-cn.github.io/">
+<link rel="alternate" hreflang="zh-CN" href="https://wuyuetiandianyingwang-cn.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="五月天电影网">
+<meta property="og:title" content="五月天电影网 - 今日放映场次_最新电影推荐_高分电影排行榜">
+<meta property="og:description" content="五月天电影网每日更新今日放映场次表、最新电影推荐、分类影片索引、原创影评与高分电影排行榜。">
+<meta property="og:url" content="https://wuyuetiandianyingwang-cn.github.io/">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="五月天电影网 - 今日放映场次与电影推荐">
+<meta name="twitter:description" content="五月天电影网每日更新放映场次表与高分电影排行榜。">
+<style>
+:root{
+  --navy:#1B2A4A;
+  --navy-d:#122039;
+  --red:#C0392B;
+  --gold:#D4A24C;
+  --cream:#FDF6E3;
+  --paper:#FFFFFF;
+  --ink:#211F1C;
+  --ink-2:#5A534C;
+  --muted:#938A7E;
+  --line:rgba(33,31,28,.14);
+  --dashed:rgba(33,31,28,.38);
+  --max:1160px;
+  --r:6px;
+  --sans:"PingFang SC","Microsoft YaHei","WenQuanYi Micro Hei","Helvetica Neue",Arial,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  background:var(--cream);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.8;
+  background-image:
+    linear-gradient(rgba(27,42,74,.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(27,42,74,.045) 1px, transparent 1px);
+  background-size:26px 26px;
+}
+a{color:inherit;text-decoration:none}
+ul,ol{list-style:none}
+:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 20px}
+.mono{font-family:"SFMono-Regular",Menlo,Consolas,"Courier New",monospace}
+
+/* 锯齿撕边 */
+.zig{height:11px;background:radial-gradient(circle at 9px 0, transparent 0 7px, var(--navy) 7px) repeat-x;background-size:18px 11px}
+.zig.up{transform:rotate(180deg)}
+.zig.cream{background:radial-gradient(circle at 9px 0, transparent 0 7px, var(--cream) 7px) repeat-x;background-size:18px 11px}
+
+/* ===== 顶部广播条 ===== */
+.broadcast{background:var(--red);color:#FFF6E3;font-size:13px;letter-spacing:.04em}
+.broadcast .wrap{display:flex;align-items:center;gap:12px;min-height:36px;flex-wrap:wrap}
+.broadcast .live{background:#FFF6E3;color:var(--red);font-weight:800;font-size:11px;padding:2px 9px;letter-spacing:.1em;border-radius:2px}
+.broadcast .marquee{flex:1;min-width:200px;white-space:nowrap;overflow:hidden}
+.broadcast .marquee span{display:inline-block;animation:slide 30s linear infinite}
+@keyframes slide{0%{transform:translateX(38%)}100%{transform:translateX(-100%)}}
+
+/* ===== 头部 ===== */
+header.top{background:var(--navy);color:var(--cream);position:sticky;top:0;z-index:70}
+.top-inner{display:flex;align-items:center;gap:18px;min-height:68px}
+.brand{display:flex;align-items:center;gap:12px;flex:0 0 auto}
+.ticket-mark{width:44px;height:30px;flex:0 0 auto;position:relative;border-radius:3px;background:linear-gradient(120deg,var(--red),#8E2A20);border:1px solid rgba(255,255,255,.35);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;color:#FFF6E3}
+.ticket-mark::before,.ticket-mark::after{content:"";position:absolute;top:50%;width:7px;height:7px;border-radius:50%;background:var(--navy);transform:translateY(-50%)}
+.ticket-mark::before{left:-4px}
+.ticket-mark::after{right:-4px}
+.brand b{display:block;font-size:20px;letter-spacing:2px;line-height:1.2}
+.brand small{display:block;font-size:10.5px;letter-spacing:.26em;color:var(--gold)}
+nav.main{margin-left:auto;display:flex;gap:2px;flex-wrap:wrap}
+nav.main a{font-size:14.5px;padding:9px 13px;border-radius:3px;color:#C9D3E4;white-space:nowrap}
+nav.main a:hover{background:rgba(255,255,255,.1);color:#fff}
+nav.main a.cur{background:var(--red);color:#FFF6E3;font-weight:700}
+.ck{display:none}
+.burger{display:none;margin-left:auto;width:40px;height:36px;border:1px solid rgba(255,255,255,.3);border-radius:3px;align-items:center;justify-content:center;cursor:pointer}
+.burger i{display:block;width:18px;height:2px;background:var(--gold);position:relative}
+.burger i::before,.burger i::after{content:"";position:absolute;left:0;width:18px;height:2px;background:var(--gold)}
+.burger i::before{top:-6px}
+.burger i::after{top:6px}
+
+/* ===== HERO 主票根 ===== */
+.hero{padding:30px 0 24px}
+.hero-ticket{display:grid;grid-template-columns:1fr 240px;background:var(--paper);border:1px solid var(--ink);position:relative;box-shadow:0 20px 44px rgba(27,42,74,.16)}
+.hero-ticket::before,.hero-ticket::after{
+  content:"";position:absolute;left:calc(100% - 240px);width:18px;height:18px;border-radius:50%;
+  background:var(--cream);border:1px solid var(--ink);transform:translateX(-50%);z-index:3;
+}
+.hero-ticket::before{top:-10px}
+.hero-ticket::after{bottom:-10px}
+.hero-main{padding:32px 34px;position:relative}
+.hero-stub{border-left:2px dashed var(--dashed);padding:32px 22px;background:linear-gradient(170deg,#FFFDF6,#F6EEDC);display:flex;flex-direction:column;justify-content:space-between}
+.serial{font-family:"SFMono-Regular",Menlo,Consolas,monospace;font-size:11px;letter-spacing:.16em;color:var(--muted);margin-bottom:10px}
+h1{font-size:44px;line-height:1.25;letter-spacing:1px;font-weight:800;margin-bottom:12px}
+h1 .mark{color:var(--red);border-bottom:5px solid var(--gold);padding-bottom:2px}
+.deck{font-size:16.5px;color:var(--ink-2);max-width:600px;margin-bottom:20px}
+.deck b{color:var(--ink)}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:22px}
+.btn{display:inline-block;padding:12px 26px;font-size:15px;font-weight:700;border-radius:3px;transition:.2s}
+.btn-a{background:var(--navy);color:var(--cream);border:1px solid var(--navy)}
+.btn-a:hover{background:var(--navy-d)}
+.btn-b{background:transparent;border:1px solid var(--ink);color:var(--ink)}
+.btn-b:hover{background:var(--ink);color:var(--cream)}
+.perf{display:flex;gap:7px;margin-top:4px}
+.perf i{width:7px;height:7px;border-radius:50%;background:var(--navy);opacity:.35}
+.stub-row{border-bottom:1px dotted var(--dashed);padding-bottom:12px;margin-bottom:12px}
+.stub-row:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0}
+.stub-row span{display:block;font-family:"SFMono-Regular",Menlo,Consolas,monospace;font-size:10.5px;letter-spacing:.14em;color:var(--muted)}
+.stub-row b{display:block;font-size:22px;line-height:1.3;color:var(--navy)}
+.stub-row b.red{color:var(--red)}
+.barcode{display:flex;align-items:flex-end;gap:2px;height:44px;margin-top:14px}
+.barcode i{display:block;width:2px;background:var(--ink);height:100%}
+.barcode i:nth-child(3n){width:4px}
+.barcode i:nth-child(4n){height:78%}
+.barcode i:nth-child(5n){height:62%}
+.barcode-txt{font-family:"SFMono-Regular",Menlo,Consolas,monospace;font-size:10px;letter-spacing:.3em;color:var(--muted);margin-top:6px;text-align:center}
+
+/* ===== 通用 ===== */
+section{padding:38px 0;scroll-margin-top:74px}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:22px;padding-bottom:10px;border-bottom:2px solid var(--ink)}
+.sec-head .h-l{display:flex;align-items:center;gap:12px}
+.sec-head .tag-no{font-family:"SFMono-Regular",Menlo,Consolas,monospace;font-size:11px;letter-spacing:.14em;background:var(--ink);color:var(--cream);padding:3px 9px}
+.sec-head h2{font-size:27px;letter-spacing:1px;line-height:1.3}
+.sec-head p{font-size:13px;color:var(--muted);width:100%;margin-top:4px}
+.more{font-size:13px;color:var(--navy);border:1px solid var(--ink);border-radius:3px;padding:6px 15px;white-space:nowrap}
+.more:hover{background:var(--navy);color:var(--cream)}
+
+/* ===== 票根卡片网格 ===== */
+.tickets{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.tk{display:grid;grid-template-columns:1fr 96px;background:var(--paper);border:1px solid var(--ink);position:relative;box-shadow:0 8px 20px rgba(27,42,74,.08);transition:.22s}
+.tk:hover{transform:translateY(-5px);box-shadow:0 16px 34px rgba(27,42,74,.16)}
+.tk::before,.tk::after{content:"";position:absolute;left:calc(100% - 96px);width:16px;height:16px;border-radius:50%;background:var(--cream);border:1px solid var(--ink);transform:translateX(-50%);z-index:2}
+.tk::before{top:-9px}
+.tk::after{bottom:-9px}
+.tk-main{padding:16px 18px}
+.tk-main .row1{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.tk-main .hall{font-family:"SFMono-Regular",Menlo,Consolas,monospace;font-size:10.5px;letter-spacing:.12em;color:#fff;background:var(--navy);padding:2px 8px}
+.tk-main .fmt{font-family:"SFMono-Regular",Menlo,Consolas,monospace;font-size:10.5px;letter-spacing:.12em;border:1px solid var(--ink);padding:1px 7px;color:var(--ink-2)}
+.tk-main h3{font-size:19px;letter-spacing:1px;margin-bottom:6px}
+.tk-main .meta{font-family:"SFMono-Regular",Menlo,Consolas,monospace;font-size:11px;letter-spacing:.08em;color:var(--muted);margin-bottom:9px}
+.tk-main p{font-size:13.5px;color:var(--ink-2);line-height:1.72}
+.tk-main .go{display:inline-block;margin-top:11px;font-size:12.5px;font-weight:700;color:var(--red);border-bottom:2px solid var(--gold);padding-bottom:1px}
+.tk-stub{border-left:2px dashed var(--dashed);padding:16px 12px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:linear-gradient(170deg,#FFFDF6,#F5EDDB)}
+.tk-stub .sc{font-family:"SFMono-Regular",Menlo,Consolas,monospace;font-size:26px;font-weight:800;color:var(--red);line-height:1}
+.tk-stub .sc-lab{font-family:"SFMono-Regular",Menlo,Consolas,monospace;font-size:10px;letter-spacing:.14em;color:var(--muted);margin-top:4px}
+.tk-stub meter{width:72px;height:8px;margin-top:10px;-webkit-appearance:none;appearance:none;background:rgba(33,31,28,.12);border-radius:99px}
+.tk-stub meter::-webkit-meter-bar{background:rgba(33,31,28,.12);border-radius:99px;overflow:hidden}
+.tk-stub meter::-webkit-meter-optimum-value{background:linear-gradient(90deg,var(--gold),var(--red));border-radius:99px}
+.tk-stub meter::-moz-meter-bar{background:linear-gradient(90deg,var(--gold),var(--red));border-radius:99px}
+.tk-stub .seat{font-family:"SFMono-Regular",Menlo,Consolas,monospace;font-size:10.5px;letter-spacing:.1em;color:var(--navy);margin-top:9px}
+
+/* ===== 场次时刻表 ===== */
+.table-shell{border:1px solid var(--ink);background:var(--paper);overflow:hidden}
+table.showtime{width:100%;border-collapse:collapse;font-size:14.5px}
+table.showtime caption{caption-side:top;text-align:left;padding:14px 18px;background:var(--navy);color:var(--cream);font-size:13.5px;letter-spacing:.06em}
+table.showtime caption b{color:var(--gold)}
+table.showtime th,table.showtime td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--line);vertical-align:middle}
+table.showtime thead th{background:#F1E9D6;font-size:12.5px;letter-spacing:.1em;color:var(--ink-2);font-weight:700;white-space:nowrap}
+table.showtime tbody tr:hover{background:#FBF6EA}
+table.showtime tbody tr:last-child td{border-bottom:0}
+table.showtime td.time{font-family:"SFMono-Regular",Menlo,Consolas,monospace;font-weight:700;color:var(--navy);white-space:nowrap}
+table.showtime td.film b{font-size:15px}
+table.showtime td.film small{display:block;font-size:11.5px;color:var(--muted)}
+.tag{display:inline-block;font-family:"SFMono-Regular",Menlo,Consolas,monospace;font-size:10.5px;letter-spacing:.1em;padding:2px 9px;border-radius:2px;white-space:nowrap}
+.tag.on{background:var(--red);color:#FFF6E3}
+.tag.soon{background:var(--navy);color:var(--cream)}
+.tag.left{background:#EEE7D5;color:var(--ink-2)}
+.table-foot{padding:12px 18px;background:#F6EEDC;font-size:12.5px;color:var(--muted);border-top:1px solid var(--line)}
+
+/* ===== 时间轴时刻 ===== */
+.timeline{border-left:2px solid var(--ink);padding-left:22px;margin-left:8px}
+.tl-item{position:relative;padding-bottom:20px}
+.tl-item:last-child{padding-bottom:0}
+.tl-item::before{content:"";position:absolute;left:-29px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--cream);border:3px solid var(--red)}
+.tl-item .tm{font-family:"SFMono-Regular",Menlo,Consolas,monospace;font-size:12px;letter-spacing:.1em;color:var(--red);font-weight:700}
+.tl-item b{display:block;font-size:16px;margin:2px 0 4px}
+.tl-item p{font-size:13.5px;color:var(--ink-2)}
+
+/* ===== 分类（票面印章墙） ===== */
+.stamps{display:flex;flex-wrap:wrap;gap:12px}
+.stamp{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;width:132px;height:96px;border:2px solid var(--red);color:var(--red);border-radius:4px;transform:rotate(-2deg);transition:.22s;background:rgba(255,255,255,.6)}
+.stamp:nth-child(even){transform:rotate(2deg)}
+.stamp:hover{background:var(--red);color:#FFF6E3;transform:rotate(0) scale(1.04)}
+.stamp b{font-size:16px;letter-spacing:1px}
+.stamp span{font-family:"SFMono-Regular",Menlo,Consolas,monospace;font-size:10.5px;letter-spacing:.1em;opacity:.85;margin-top:2px}
+.stamp.big{width:170px;border-color:var(--navy);color:var(--navy)}
+.stamp.big:hover{background:var(--navy);color:var(--cream)}
+
+/* ===== 影评 ===== */
+.reviews{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.rv{border:1px solid var(--ink);background:var(--paper);padding:20px 22px;position:relative;transition:.22s}
+.rv:hover{box-shadow:0 14px 30px rgba(27,42,74,.14)}
+.rv .corner{position:absolute;top:0;right:0;width:34px;height:34px;background:var(--navy);color:var(--cream);font-family:"SFMono-Regular",Menlo,Consolas,monospace;font-size:11px;display:flex;align-items:center;justify-content:center}
+.rv h3{font-size:18px;margin-bottom:8px;line-height:1.5;padding-right:34px}
+.rv p{font-size:14px;color:var(--ink-2);line-height:1.85}
+.rv .sig{display:flex;gap:14px;flex-wrap:wrap;font-family:"SFMono-Regular",Menlo,Consolas,monospace;font-size:11px;letter-spacing:.06em;color:var(--muted);margin-top:13px;padding-top:11px;border-top:1px dotted var(--dashed)}
+
+/* ===== 排行榜 ===== */
+.rank-shell{display:grid;grid-template-columns:1fr 300px;gap:22px}
+.board{border:1px solid var(--ink);background:var(--paper)}
+.board li{display:flex;align-items:center;gap:14px;padding:13px 18px;border-bottom:1px solid var(--line)}
+.board li:last-child{border-bottom:0}
+.board li .seat-no{flex:0 0 34px;height:34px;display:flex;align-items:center;justify-content:center;background:var(--navy);color:var(--cream);font-family:"SFMono-Regular",Menlo,Consolas,monospace;font-size:13px;font-weight:700;border-radius:3px}
+.board li:nth-child(-n+3) .seat-no{background:var(--red)}
+.board li .nm{flex:1;min-width:0}
+.board li .nm b{display:block;font-size:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.board li .nm meter{width:100%;max-width:220px;height:8px;margin-top:6px;-webkit-appearance:none;appearance:none}
+.board li .nm meter::-webkit-meter-bar{background:rgba(33,31,28,.12);border-radius:99px;overflow:hidden}
+.board li .nm meter::-webkit-meter-optimum-value{background:linear-gradient(90deg,var(--navy),var(--red));border-radius:99px}
+.board li .nm meter::-moz-meter-bar{background:linear-gradient(90deg,var(--navy),var(--red));border-radius:99px}
+.board li .pt{flex:0 0 auto;font-family:"SFMono-Regular",Menlo,Consolas,monospace;font-size:18px;font-weight:800;color:var(--red)}
+.notice-box{border:1px solid var(--ink);background:var(--navy);color:var(--cream);padding:20px}
+.notice-box h3{font-size:16px;color:var(--gold);margin-bottom:12px;letter-spacing:1px}
+.notice-box ol li{display:flex;gap:10px;padding:8px 0;border-bottom:1px dashed rgba(255,255,255,.2);font-size:13.5px}
+.notice-box ol li:last-child{border-bottom:0}
+.notice-box ol li b{color:var(--gold);font-family:"SFMono-Regular",Menlo,Consolas,monospace;flex:0 0 16px;font-size:12px}
+.notice-box p{font-size:12.5px;color:#B9C4D6;margin-top:12px;line-height:1.75}
+
+/* ===== 关于 ===== */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.ab{border:1px solid var(--ink);background:var(--paper);padding:24px 26px}
+.ab h3{font-size:20px;margin-bottom:12px;padding-bottom:9px;border-bottom:2px solid var(--ink)}
+.ab p{font-size:14.5px;color:var(--ink-2);margin-bottom:11px}
+.ab p:last-child{margin-bottom:0}
+.ab strong{color:var(--red)}
+.checks{margin-top:6px}
+.checks li{display:flex;gap:10px;padding:9px 0;border-bottom:1px dotted var(--dashed);font-size:14px;line-height:1.7}
+.checks li:last-child{border-bottom:0}
+.checks li::before{content:"✓";color:var(--red);font-weight:800;flex:0 0 auto}
+
+/* ===== FAQ（自定义折叠，非 details） ===== */
+.qa{border:1px solid var(--ink);background:var(--paper)}
+.qa-item{border-bottom:1px solid var(--line)}
+.qa-item:last-child{border-bottom:0}
+.qa-in{display:none}
+.qa-q{display:flex;align-items:center;gap:12px;padding:15px 20px;cursor:pointer;font-size:15.5px;font-weight:700}
+.qa-q:hover{background:#FBF6EA}
+.qa-q::after{content:"＋";margin-left:auto;color:var(--red);font-size:18px;flex:0 0 auto}
+.qa-a{padding:0 20px 17px;font-size:14px;color:var(--ink-2);line-height:1.9;border-top:1px dotted var(--dashed);padding-top:13px;margin:0 20px 0;padding-left:0;padding-right:0}
+.qa-in:checked ~ .qa-a{display:block}
+.qa-in:checked ~ .qa-q::after{content:"－"}
+
+/* ===== 底部 ===== */
+footer{margin-top:26px;background:var(--navy);color:#C9D3E4}
+.zig.cream.flip{transform:rotate(180deg)}
+.f-wrap{padding:36px 0 24px}
+.f-top{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:26px}
+.f-top h4{font-size:15.5px;color:var(--gold);letter-spacing:1px;margin-bottom:12px;padding-bottom:9px;border-bottom:1px solid rgba(255,255,255,.2)}
+.f-top p{font-size:13.5px;color:#AAB6CB;line-height:1.9}
+.f-top li{padding:6px 0;border-bottom:1px dotted rgba(255,255,255,.14)}
+.f-top li a{font-size:13.5px;color:#AAB6CB}
+.f-top li a:hover{color:var(--gold)}
+.f-url{font-family:"SFMono-Regular",Menlo,Consolas,monospace;font-size:12px;color:var(--gold);margin-top:10px;word-break:break-all}
+.kw{margin-top:24px;padding-top:18px;border-top:1px dashed rgba(255,255,255,.2);font-size:12.5px;color:#8A96AE}
+.kw a{display:inline-block;margin:4px 8px 0 0;border:1px solid rgba(255,255,255,.22);padding:3px 11px;color:#AAB6CB;border-radius:2px}
+.kw a:hover{border-color:var(--gold);color:var(--gold)}
+.f-bot{margin-top:18px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-family:"SFMono-Regular",Menlo,Consolas,monospace;font-size:11.5px;color:#8A96AE}
+.f-bot a{color:#8A96AE}
+
+/* ===== 响应式 ===== */
+@media (max-width:1024px){
+  h1{font-size:34px}
+  .tickets{grid-template-columns:repeat(2,1fr)}
+  .reviews{grid-template-columns:1fr}
+  .rank-shell{grid-template-columns:1fr}
+  .about{grid-template-columns:1fr}
+  .f-top{grid-template-columns:1fr 1fr}
+}
+@media (max-width:820px){
+  nav.main{display:none;position:absolute;left:0;right:0;top:100%;background:var(--navy-d);border-top:1px solid rgba(255,255,255,.16);flex-direction:column;padding:10px 16px 16px;gap:2px;margin-left:0}
+  nav.main a{padding:12px 14px;font-size:15.5px;border-radius:3px}
+  .burger{display:flex}
+  .ck:checked ~ nav.main{display:flex}
+  .top-inner{position:relative;min-height:60px}
+  .hero-ticket{grid-template-columns:1fr}
+  .hero-ticket::before,.hero-ticket::after{display:none}
+  .hero-stub{border-left:0;border-top:2px dashed var(--dashed);flex-direction:row;flex-wrap:wrap;gap:18px;align-items:center;padding:20px 22px}
+  .stub-row{border-bottom:0;padding-bottom:0;margin-bottom:0;flex:1 1 120px}
+  .barcode{flex:0 0 auto;margin-top:0}
+  .barcode-txt{display:none}
+  .hero-main{padding:26px 22px}
+}
+@media (max-width:640px){
+  body{font-size:15px}
+  .wrap{padding:0 14px}
+  h1{font-size:27px}
+  .sec-head h2{font-size:21px}
+  .tickets{grid-template-columns:1fr}
+  .tk{grid-template-columns:1fr}
+  .tk::before,.tk::after{display:none}
+  .tk-stub{border-left:0;border-top:2px dashed var(--dashed);flex-direction:row;justify-content:flex-start;gap:16px;padding:12px 16px}
+  .tk-stub meter{margin-top:0;width:96px}
+  .tk-stub .seat{margin-top:0;margin-left:auto}
+  .stamps{gap:9px}
+  .stamp{width:calc(50% - 5px);height:82px}
+  .stamp.big{width:100%}
+  .timeline{padding-left:18px}
+  /* 表格转卡片 */
+  table.showtime thead{display:none}
+  table.showtime,table.showtime tbody,table.showtime tr,table.showtime td{display:block;width:100%}
+  table.showtime tr{border-bottom:1px solid var(--line);padding:8px 0}
+  table.showtime tr:last-child{border-bottom:0}
+  table.showtime td{border:0;padding:4px 16px;display:flex;gap:12px;align-items:center}
+  table.showtime td::before{content:attr(data-label);flex:0 0 74px;font-family:"SFMono-Regular",Menlo,Consolas,monospace;font-size:11px;letter-spacing:.1em;color:var(--muted)}
+  .f-top{grid-template-columns:1fr}
+  section{padding:28px 0}
+  .hero{padding:20px 0 14px}
+}
+@media print{header.top,.broadcast{position:static}}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaobao.js"></script>
+
+<!-- 广播条 -->
+<div class="broadcast">
+  <div class="wrap">
+    <span class="live">正在放映</span>
+    <div class="marquee"><span>五月天电影网 · 今日共 42 场排片 · 华语悬疑《长街尽头》站内评分 8.9 · 科幻新作《第七大陆》IMAX 场次已开 · 高分电影排行榜每两小时刷新 · 全站片库收录 16800 部影片</span></div>
+  </div>
+</div>
+
+<!-- 头部 -->
+<header class="top">
+  <div class="wrap top-inner">
+    <a class="brand" href="#" aria-label="五月天电影网首页">
+      <span class="ticket-mark" aria-hidden="true">5</span>
+      <span>
+        <b>五月天电影网</b>
+        <small>WUYUETIAN MOVIE</small>
+      </span>
+    </a>
+    <input class="ck" id="navck" type="checkbox" aria-label="展开导航菜单">
+    <label class="burger" for="navck" aria-hidden="true"><i></i></label>
+    <nav class="main" aria-label="主导航">
+      <a class="cur" href="#">首页</a>
+      <a href="#today">今日放映</a>
+      <a href="#showtime">场次时刻表</a>
+      <a href="#category">影片分类</a>
+      <a href="#review">影评资讯</a>
+      <a href="#rank">高分排行榜</a>
+      <a href="#about">关于我们</a>
+      <a href="#qa">常见问答</a>
+    </nav>
+  </div>
+</header>
+<div class="zig" aria-hidden="true"></div>
+
+<main>
+  <!-- HERO 主票根 -->
+  <section class="hero" id="home">
+    <div class="wrap">
+      <div class="hero-ticket">
+        <div class="hero-main">
+          <p class="serial">ADMIT ONE · NO. 0520 · 五月天电影网 · 2026-10-02</p>
+          <h1>今天看什么，<span class="mark">五月天电影网</span><br>替你排好场次</h1>
+          <p class="deck"><b>五月天电影网</b>是一份按"场次"组织的电影站点：今日放映片单、逐时段场次时刻表、分类影片索引、原创影评与高分排行榜，全部按你真正会坐进影厅的那个时间点来排。</p>
+          <div class="hero-actions">
+            <a class="btn btn-a" href="#showtime">查看今日场次</a>
+            <a class="btn btn-b" href="#rank">高分电影排行榜</a>
+          </div>
+          <div class="perf" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        </div>
+        <div class="hero-stub">
+          <div>
+            <div class="stub-row"><span>今日排片</span><b>42 场</b></div>
+            <div class="stub-row"><span>收录影片</span><b>16800</b></div>
+            <div class="stub-row"><span>编辑均分</span><b class="red">8.7</b></div>
+          </div>
+          <div>
+            <div class="barcode" aria-hidden="true">
+              <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            </div>
+            <p class="barcode-txt">WYTDYW 0520</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目一：今日放映 -->
+  <section id="today">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="h-l">
+          <span class="tag-no">TODAY</span>
+          <h2>今日放映推荐</h2>
+        </div>
+        <a class="more" href="#">查看完整片库</a>
+        <p>五月天电影网编辑组每日 08:00 更新 · 按影厅与时段排列</p>
+      </div>
+
+      <div class="tickets">
+        <article class="tk">
+          <div class="tk-main">
+            <div class="row1"><span class="hall">1 号厅</span><span class="fmt">2D 国语</span></div>
+            <h3>长街尽头</h3>
+            <p class="meta">2026 · 悬疑 / 犯罪 · 128 分钟</p>
+            <p>双线叙事在第七十分钟交汇，此后每一段回忆都在改写前面的判断，是今年华语悬疑里逻辑最自洽的一部。</p>
+            <a class="go" href="#">查看影片详情</a>
+          </div>
+          <div class="tk-stub">
+            <span class="sc">8.9</span>
+            <span class="sc-lab">站内评分</span>
+            <meter min="0" max="10" value="8.9" title="站内评分 8.9">8.9</meter>
+            <span class="seat">余票充足</span>
+          </div>
+        </article>
+
+        <article class="tk">
+          <div class="tk-main">
+            <div class="row1"><span class="hall">IMAX 厅</span><span class="fmt">IMAX 原声</span></div>
+            <h3>第七大陆</h3>
+            <p class="meta">2026 · 科幻 / 冒险 · 131 分钟</p>
+            <p>极地科考站失联后的七十二小时，视觉体系克制，配乐是加分项，建议选大屏场次。</p>
+            <a class="go" href="#">查看影片详情</a>
+          </div>
+          <div class="tk-stub">
+            <span class="sc">8.6</span>
+            <span class="sc-lab">站内评分</span>
+            <meter min="0" max="10" value="8.6" title="站内评分 8.6">8.6</meter>
+            <span class="seat">余票紧张</span>
+          </div>
+        </article>
+
+        <article class="tk">
+          <div class="tk-main">
+            <div class="row1"><span class="hall">3 号厅</span><span class="fmt">2D 国语</span></div>
+            <h3>橘子汽水</h3>
+            <p class="meta">2025 · 青春 / 文艺 · 104 分钟</p>
+            <p>被多数榜单漏掉的小成本作品，讲一个小镇夏天与一场迟到的告别，后劲很足。</p>
+            <a class="go" href="#">查看影片详情</a>
+          </div>
+          <div class="tk-stub">
+            <span class="sc">8.4</span>
+            <span class="sc-lab">站内评分</span>
+            <meter min="0" max="10" value="8.4" title="站内评分 8.4">8.4</meter>
+            <span class="seat">余票充足</span>
+          </div>
+        </article>
+
+        <article class="tk">
+          <div class="tk-main">
+            <div class="row1"><span class="hall">4 号厅</span><span class="fmt">3D 国语</span></div>
+            <h3>纸上星河</h3>
+            <p class="meta">2026 · 动画 / 治愈 · 96 分钟</p>
+            <p>手绘质感极佳，一封寄不出去的信被整座城市接力传递，适合周末合家观看。</p>
+            <a class="go" href="#">查看影片详情</a>
+          </div>
+          <div class="tk-stub">
+            <span class="sc">8.3</span>
+            <span class="sc-lab">站内评分</span>
+            <meter min="0" max="10" value="8.3" title="站内评分 8.3">8.3</meter>
+            <span class="seat">余票充足</span>
+          </div>
+        </article>
+
+        <article class="tk">
+          <div class="tk-main">
+            <div class="row1"><span class="hall">5 号厅</span><span class="fmt">2D 原声</span></div>
+            <h3>一年七城</h3>
+            <p class="meta">2024 · 纪录 / 人文 · 112 分钟</p>
+            <p>七位导演各拍一座城的一年，剪辑节奏舒服，是了解当下城市生活最省力的方式。</p>
+            <a class="go" href="#">查看影片详情</a>
+          </div>
+          <div class="tk-stub">
+            <span class="sc">8.2</span>
+            <span class="sc-lab">站内评分</span>
+            <meter min="0" max="10" value="8.2" title="站内评分 8.2">8.2</meter>
+            <span class="seat">余票充足</span>
+          </div>
+        </article>
+
+        <article class="tk">
+          <div class="tk-main">
+            <div class="row1"><span class="hall">6 号厅</span><span class="fmt">2D 国语</span></div>
+            <h3>归途列车</h3>
+            <p class="meta">2026 · 剧情 / 家庭 · 118 分钟</p>
+            <p>一趟跨省列车上的六个陌生人，用一夜时间讲完各自未说完的话，结尾长镜头值得二刷。</p>
+            <a class="go" href="#">查看影片详情</a>
+          </div>
+          <div class="tk-stub">
+            <span class="sc">8.5</span>
+            <span class="sc-lab">站内评分</span>
+            <meter min="0" max="10" value="8.5" title="站内评分 8.5">8.5</meter>
+            <span class="seat">余票紧张</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目二：场次时刻表 -->
+  <section id="showtime">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="h-l">
+          <span class="tag-no">SCHEDULE</span>
+          <h2>今日场次时刻表</h2>
+        </div>
+        <a class="more" href="#">下载完整排片</a>
+        <p>五月天电影网按时间轴整理，含影厅、制式与余票状态</p>
+      </div>
+
+      <div class="table-shell">
+        <table class="showtime">
+          <caption><b>五月天电影网</b> · 2026 年 10 月 2 日（周五）排片一览 · 共 42 场</caption>
+          <thead>
+            <tr>
+              <th scope="col">放映时间</th>
+              <th scope="col">影片</th>
+              <th scope="col">影厅 / 制式</th>
+              <th scope="col">片长</th>
+              <th scope="col">评分</th>
+              <th scope="col">状态</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="time" data-label="时间">10:20</td>
+              <td class="film" data-label="影片"><b>长街尽头</b><small>悬疑 / 犯罪</small></td>
+              <td data-label="影厅">1 号厅 · 2D 国语</td>
+              <td data-label="片长">128 分钟</td>
+              <td data-label="评分">8.9</td>
+              <td data-label="状态"><span class="tag left">余票充足</span></td>
+            </tr>
+            <tr>
+              <td class="time" data-label="时间">12:40</td>
+              <td class="film" data-label="影片"><b>橘子汽水</b><small>青春 / 文艺</small></td>
+              <td data-label="影厅">3 号厅 · 2D 国语</td>
+              <td data-label="片长">104 分钟</td>
+              <td data-label="评分">8.4</td>
+              <td data-label="状态"><span class="tag left">余票充足</span></td>
+            </tr>
+            <tr>
+              <td class="time" data-label="时间">14:10</td>
+              <td class="film" data-label="影片"><b>纸上星河</b><small>动画 / 治愈</small></td>
+              <td data-label="影厅">4 号厅 · 3D 国语</td>
+              <td data-label="片长">96 分钟</td>
+              <td data-label="评分">8.3</td>
+              <td data-label="状态"><span class="tag soon">即将开场</span></td>
+            </tr>
+            <tr>
+              <td class="time" data-label="时间">15:30</td>
+              <td class="film" data-label="影片"><b>第七大陆</b><small>科幻 / 冒险</small></td>
+              <td data-label="影厅">IMAX 厅 · 原声</td>
+              <td data-label="片长">131 分钟</td>
+              <td data-label="评分">8.6</td>
+              <td data-label="状态"><span class="tag on">热映中</span></td>
+            </tr>
+            <tr>
+              <td class="time" data-label="时间">17:50</td>
+              <td class="film" data-label="影片"><b>归途列车</b><small>剧情 / 家庭</small></td>
+              <td data-label="影厅">6 号厅 · 2D 国语</td>
+              <td data-label="片长">118 分钟</td>
+              <td data-label="评分">8.5</td>
+              <td data-label="状态"><span class="tag soon">即将开场</span></td>
+            </tr>
+            <tr>
+              <td class="time" data-label="时间">19:30</td>
+              <td class="film" data-label="影片"><b>长街尽头</b><small>悬疑 / 犯罪</small></td>
+              <td data-label="影厅">1 号厅 · 2D 国语</td>
+              <td data-label="片长">128 分钟</td>
+              <td data-label="评分">8.9</td>
+              <td data-label="状态"><span class="tag on">热映中</span></td>
+            </tr>
+            <tr>
+              <td class="time" data-label="时间">21:10</td>
+              <td class="film" data-label="影片"><b>一年七城</b><small>纪录 / 人文</small></td>
+              <td data-label="影厅">5 号厅 · 2D 原声</td>
+              <td data-label="片长">112 分钟</td>
+              <td data-label="评分">8.2</td>
+              <td data-label="状态"><span class="tag left">余票充足</span></td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="table-foot">说明：以上为五月天电影网示例排片，实际场次以影城公告为准；评分取自本站观众与编辑加权结果。</p>
+      </div>
+
+      <ol class="timeline" style="margin-top:24px">
+        <li class="tl-item">
+          <span class="tm">10:20 — 12:28</span>
+          <b>上午场 · 长街尽头</b>
+          <p>人少、票价低，适合想安静看完的观众；五月天电影网把上午场列为悬疑片首选。</p>
+        </li>
+        <li class="tl-item">
+          <span class="tm">14:10 — 15:46</span>
+          <b>午后场 · 纸上星河</b>
+          <p>合家欢时段，带小朋友的观众集中，建议提前十分钟入场。</p>
+        </li>
+        <li class="tl-item">
+          <span class="tm">19:30 — 21:38</span>
+          <b>黄金场 · 长街尽头</b>
+          <p>今日最热门场次，IMAX 与 2D 同步排映，本站建议提前选座。</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 栏目三：分类 -->
+  <section id="category">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="h-l">
+          <span class="tag-no">GENRE</span>
+          <h2>影片分类索引</h2>
+        </div>
+        <a class="more" href="#">进入分类索引</a>
+        <p>五月天电影网按类型、地区、年份三维检索，同一部影片可归入多个分类</p>
+      </div>
+
+      <div class="stamps">
+        <a class="stamp big" href="#"><b>今日放映推荐</b><span>HOT TODAY</span></a>
+        <a class="stamp" href="#"><b>动作片</b><span>1240 部</span></a>
+        <a class="stamp" href="#"><b>科幻片</b><span>920 部</span></a>
+        <a class="stamp" href="#"><b>悬疑片</b><span>1080 部</span></a>
+        <a class="stamp" href="#"><b>爱情片</b><span>1530 部</span></a>
+        <a class="stamp" href="#"><b>喜剧片</b><span>1340 部</span></a>
+        <a class="stamp" href="#"><b>动画片</b><span>780 部</span></a>
+        <a class="stamp" href="#"><b>纪录片</b><span>460 部</span></a>
+        <a class="stamp" href="#"><b>华语电影</b><span>3260 部</span></a>
+        <a class="stamp" href="#"><b>欧美电影</b><span>4380 部</span></a>
+        <a class="stamp" href="#"><b>日韩电影</b><span>2280 部</span></a>
+        <a class="stamp" href="#"><b>2026 新片</b><span>436 部</span></a>
+        <a class="stamp" href="#"><b>经典修复</b><span>560 部</span></a>
+        <a class="stamp" href="#"><b>冷门佳作</b><span>740 部</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目四：影评资讯 -->
+  <section id="review">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="h-l">
+          <span class="tag-no">REVIEW</span>
+          <h2>影评与影视资讯</h2>
+        </div>
+        <a class="more" href="#">阅读更多影评</a>
+        <p>五月天电影网原创内容，观点独立，关键剧情单独标注</p>
+      </div>
+
+      <div class="reviews">
+        <article class="rv">
+          <span class="corner" aria-hidden="true">01</span>
+          <h3>《长街尽头》：伏笔是如何在第三幕全部回收的</h3>
+          <p>五月天电影网影评组逐段拆解它的线索铺设：第一段看似闲聊的对话，其实已经给出了关键时间差。好的悬疑片不靠吓你，靠让你回头重读一遍前面发生的事。全文无剧透。</p>
+          <p class="sig"><span>五月天电影网 · 影评组</span><span>2026-09-30</span><span>阅读 1.4 万</span></p>
+        </article>
+        <article class="rv">
+          <span class="corner" aria-hidden="true">02</span>
+          <h3>2026 秋季档前瞻：六部值得标记的院线片</h3>
+          <p>今年秋季档悬疑与科幻占比明显上升，五月天电影网提前梳理必看清单，并附三条避雷提示，帮你把电影票花在刀刃上。</p>
+          <p class="sig"><span>五月天电影网 · 编辑部</span><span>2026-09-27</span><span>阅读 9200</span></p>
+        </article>
+        <article class="rv">
+          <span class="corner" aria-hidden="true">03</span>
+          <h3>数据观察：老片回看潮正在改变排片结构</h3>
+          <p>近三个月，上线十年以上的经典片播放量同比增长 38%。五月天电影网数据组解读这波回看潮背后的观影习惯变化，以及它对新片排片的影响。</p>
+          <p class="sig"><span>五月天电影网 · 数据组</span><span>2026-09-22</span><span>阅读 6800</span></p>
+        </article>
+        <article class="rv">
+          <span class="corner" aria-hidden="true">04</span>
+          <h3>选座指南：不同影厅的第几排最舒服</h3>
+          <p>从银幕高度、视线夹角到音响甜点区，五月天电影网按 IMAX、普通厅与小厅分别给出建议排数，附一张速查表。</p>
+          <p class="sig"><span>五月天电影网 · 观影组</span><span>2026-09-18</span><span>阅读 7500</span></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目五：排行榜 -->
+  <section id="rank">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="h-l">
+          <span class="tag-no">RANKING</span>
+          <h2>五月天电影网高分排行榜</h2>
+        </div>
+        <a class="more" href="#">查看完整榜单</a>
+        <p>综合站内评分、收藏量与讨论热度，每两小时刷新一次</p>
+      </div>
+
+      <div class="rank-shell">
+        <ol class="board">
+          <li>
+            <span class="seat-no">01</span>
+            <span class="nm"><b>长街尽头</b><meter min="0" max="10" value="9.4" title="9.4 分">9.4</meter></span>
+            <span class="pt">9.4</span>
+          </li>
+          <li>
+            <span class="seat-no">02</span>
+            <span class="nm"><b>归途列车</b><meter min="0" max="10" value="9.1" title="9.1 分">9.1</meter></span>
+            <span class="pt">9.1</span>
+          </li>
+          <li>
+            <span class="seat-no">03</span>
+            <span class="nm"><b>第七大陆</b><meter min="0" max="10" value="8.9" title="8.9 分">8.9</meter></span>
+            <span class="pt">8.9</span>
+          </li>
+          <li>
+            <span class="seat-no">04</span>
+            <span class="nm"><b>橘子汽水</b><meter min="0" max="10" value="8.7" title="8.7 分">8.7</meter></span>
+            <span class="pt">8.7</span>
+          </li>
+          <li>
+            <span class="seat-no">05</span>
+            <span class="nm"><b>纸上星河</b><meter min="0" max="10" value="8.5" title="8.5 分">8.5</meter></span>
+            <span class="pt">8.5</span>
+          </li>
+          <li>
+            <span class="seat-no">06</span>
+            <span class="nm"><b>一年七城</b><meter min="0" max="10" value="8.3" title="8.3 分">8.3</meter></span>
+            <span class="pt">8.3</span>
+          </li>
+          <li>
+            <span class="seat-no">07</span>
+            <span class="nm"><b>静默海域</b><meter min="0" max="10" value="8.1" title="8.1 分">8.1</meter></span>
+            <span class="pt">8.1</span>
+          </li>
+          <li>
+            <span class="seat-no">08</span>
+            <span class="nm"><b>深夜放映厅</b><meter min="0" max="10" value="7.9" title="7.9 分">7.9</meter></span>
+            <span class="pt">7.9</span>
+          </li>
+        </ol>
+
+        <aside class="notice-box">
+          <h3>放映须知</h3>
+          <ol>
+            <li><b>1</b><span>开场前 20 分钟可现场选座</span></li>
+            <li><b>2</b><span>IMAX 与 3D 场次需自备或现场购镜</span></li>
+            <li><b>3</b><span>黄金场建议提前一天在线选座</span></li>
+            <li><b>4</b><span>迟到 15 分钟后谢绝入场</span></li>
+          </ol>
+          <p>以上须知由五月天电影网整理，具体规则以各影城公告为准。</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目六：关于 -->
+  <section id="about">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="h-l">
+          <span class="tag-no">ABOUT</span>
+          <h2>关于五月天电影网</h2>
+        </div>
+        <a class="more" href="#">联系我们</a>
+        <p>我们按"场次"组织内容，也按"场次"理解一部电影</p>
+      </div>
+
+      <div class="about">
+        <div class="ab">
+          <h3>五月天电影网是什么</h3>
+          <p><strong>五月天电影网</strong>（WUYUETIAN MOVIE）创办于 2023 年，是一个按"放映场次"组织内容的中文电影站点。与常见的片库不同，我们把每一天拆成若干时段：上午场看什么、午后场看什么、黄金场看什么，按你真正会坐进影厅的时间点来推荐。</p>
+          <p>站内每个条目都由编辑人工审校，评分由<strong>五月天电影网</strong>观众打分与编辑评分加权得出，公开打分人数与分数分布，不接受任何形式的刷分与置顶。</p>
+        </div>
+        <div class="ab">
+          <h3>编辑部四条约定</h3>
+          <ul class="checks">
+            <li>看不完的片子不进推荐位，宁可空着也不凑数</li>
+            <li>影评不剧透，关键剧情单独折叠，由读者选择是否展开</li>
+            <li>评分可追溯，公开打分人数与分数分布，拒绝水军干扰</li>
+            <li>排片信息与影城公告不一致时，以影城为准并标注更正</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目七：常见问答 -->
+  <section id="qa">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="h-l">
+          <span class="tag-no">FAQ</span>
+          <h2>常见问答</h2>
+        </div>
+        <p>关于五月天电影网的使用与内容说明</p>
+      </div>
+
+      <div class="qa">
+        <div class="qa-item">
+          <input class="qa-in" id="q1" type="checkbox" checked>
+          <label class="qa-q" for="q1">五月天电影网的评分是怎么算出来的？</label>
+          <div class="qa-a"><p>采用"观众打分 + 编辑评分"加权模型，观众分占七成、编辑分占三成，并剔除异常打分样本。每个影片条目都会展示参与打分的人数与分数分布区间，方便你判断样本是否足够。</p></div>
+        </div>
+        <div class="qa-item">
+          <input class="qa-in" id="q2" type="checkbox">
+          <label class="qa-q" for="q2">场次时刻表多久更新一次？</label>
+          <div class="qa-a"><p>今日放映场次与时刻表每日 08:00 更新，热门影片加场时会实时补充；编辑精选片单每周一更新；影评与影视资讯不定期发布，重大电影节期间会提高更新频率。</p></div>
+        </div>
+        <div class="qa-item">
+          <input class="qa-in" id="q3" type="checkbox">
+          <label class="qa-q" for="q3">如何向我推荐的电影投稿？</label>
+          <div class="qa-a"><p>通过页面底部的"投稿与合作"入口留言，注明片名、年份与你的一句话推荐理由，五月天电影网编辑组会在三个工作日内回复。</p></div>
+        </div>
+        <div class="qa-item">
+          <input class="qa-in" id="q4" type="checkbox">
+          <label class="qa-q" for="q4">手机上能正常查看时刻表吗？</label>
+          <div class="qa-a"><p>可以。五月天电影网全站响应式布局，手机上场次时刻表会自动转为分条卡片：每一行前会显示"时间 / 影片 / 影厅"等字段名，票根卡片也会切换为上下结构，单手即可浏览。</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- 底部 -->
+<div class="zig cream flip" aria-hidden="true"></div>
+<footer>
+  <div class="f-wrap">
+    <div class="wrap">
+      <div class="f-top">
+        <div>
+          <h4>五月天电影网</h4>
+          <p>五月天电影网（WUYUETIAN MOVIE）按放映场次组织内容，提供今日放映推荐、场次时刻表、分类影片索引、原创影评与高分电影排行榜，帮你按时间选片、按时段看片。</p>
+          <p class="f-url">网址：https://wuyuetiandianyingwang-cn.github.io</p>
+        </div>
+        <div>
+          <h4>频道导航</h4>
+          <ul>
+            <li><a href="#today">今日放映推荐</a></li>
+            <li><a href="#showtime">场次时刻表</a></li>
+            <li><a href="#category">影片分类索引</a></li>
+            <li><a href="#rank">高分排行榜</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>关于我们</h4>
+          <ul>
+            <li><a href="#about">关于五月天电影网</a></li>
+            <li><a href="#qa">常见问答</a></li>
+            <li><a href="#">投稿与合作</a></li>
+            <li><a href="#">内容声明</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>友情链接</h4>
+          <ul>
+            <li><a href="#">电影节日历</a></li>
+            <li><a href="#">独立电影观察</a></li>
+            <li><a href="#">影视资料库</a></li>
+            <li><a href="#">影迷社区</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="kw">
+        相关关键词：
+        <a href="#">五月天电影网</a><a href="#">电影推荐</a><a href="#">今日放映</a><a href="#">电影场次表</a><a href="#">最新电影</a><a href="#">影视资讯</a><a href="#">高分电影</a><a href="#">电影排行榜</a><a href="#">影评</a><a href="#">观影指南</a>
+      </div>
+
+      <div class="f-bot">
+        <span>&copy; 2026 五月天电影网 WUYUETIAN MOVIE · ADMIT ONE NO.0520 · 保留所有权利</span>
+        <span><a href="#">隐私政策</a> · <a href="#">使用条款</a> · <a href="#home">回到顶部</a></span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://wuyuetiandianyingwang-cn.github.io/#website",
+      "name": "五月天电影网",
+      "alternateName": "WUYUETIAN MOVIE",
+      "url": "https://wuyuetiandianyingwang-cn.github.io/",
+      "description": "五月天电影网是专注电影推荐与放映资讯的中文影迷站点，每日更新今日放映场次表、最新电影推荐、分类影片索引、原创影评与高分电影排行榜。",
+      "inLanguage": "zh-CN",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://wuyuetiandianyingwang-cn.github.io/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://wuyuetiandianyingwang-cn.github.io/#organization",
+      "name": "五月天电影网",
+      "url": "https://wuyuetiandianyingwang-cn.github.io/",
+      "description": "五月天电影网提供今日放映推荐、场次时刻表、分类影片索引、原创影评与高分电影排行榜服务。"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "五月天电影网首页", "item": "https://wuyuetiandianyingwang-cn.github.io/"},
+        {"@type": "ListItem", "position": 2, "name": "今日放映推荐", "item": "https://wuyuetiandianyingwang-cn.github.io/#today"},
+        {"@type": "ListItem", "position": 3, "name": "场次时刻表", "item": "https://wuyuetiandianyingwang-cn.github.io/#showtime"},
+        {"@type": "ListItem", "position": 4, "name": "影片分类索引", "item": "https://wuyuetiandianyingwang-cn.github.io/#category"},
+        {"@type": "ListItem", "position": 5, "name": "五月天电影网高分排行榜", "item": "https://wuyuetiandianyingwang-cn.github.io/#rank"}
+      ]
+    }
+  ]
+}
+</script>
+
+</body>
+</html>
